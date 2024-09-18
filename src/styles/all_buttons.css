@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(90,69,170);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.option_container h1 {
+    background-color: rgb(226,221,246);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+main {
+    background-color: rgb(226,221,246);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.store {
+    text-align: center;
+    padding: 0% 20%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.store a button {
+    background-color: rgb(79,192,167); 
+    color: rgb(0, 0, 0);
+    width: 120px; 
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    flex: 0 1 calc(20% - 40px);
+    box-sizing: border-box;
+    border: 2px black solid;
+}
+
+.store button:hover {
+    transform: scale(1.1);
+}
+
+.option_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .store button {
+        width: 45%;
+        font-size: 14px;
+        margin: 5px;
+    }
+    .store {
+        padding: 0px;
+    }
+    .store a button {
+        border: none;
+    }
+}
