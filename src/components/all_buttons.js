@@ -5,7 +5,6 @@ export default function all_buttons() {
     return (
         <main>
             <div class="option_container">
-                
                 <h1>Available Languages</h1>
                 <div class="store">
                     <a href="/afrikaans/"><button>Afrikaans</button></a>
