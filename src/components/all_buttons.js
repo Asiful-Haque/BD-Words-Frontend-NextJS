@@ -4,9 +4,9 @@ import '../styles/all_buttons.css';
 export default function all_buttons() {
     return (
         <main>
-            <div class="option_container">
+            <div className="option_container">
                 <h1>Available Languages</h1>
-                <div class="store">
+                <div className="store">
                     <a href="/afrikaans/"><button>Afrikaans</button></a>
                     <a href="/amharic/"><button>Amharic</button></a>
                     <a href="/burmese/"><button>Burmese</button></a>

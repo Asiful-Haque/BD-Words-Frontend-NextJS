@@ -1,0 +1,77 @@
+/* .container {
+    width: 100%;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    left: 0;
+    margin: auto;
+} */
+.random_word_container {
+    width: 100%;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-direction: row;
+    background-color: rgb(226,221,246);
+}
+
+.random_word_container .image {
+    width: 50%;
+    padding-left: 150px;
+    margin-left:120px;
+}
+.text_container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 30px;
+}
+.text_container h3 {
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+
+.five_words {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+    margin-top: 30px;
+}
+
+.ind_button {
+    background-color: rgb(81,193,171); 
+    color: rgb(0, 0, 0); 
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.ind_button:hover {
+    background-color: rgb(226,221,246); 
+    transform: scale(1.05); 
+}
+
+.ind_button:active {
+    background-color: rgb(81,193,171); /* Even darker paste when clicked */
+    transform: scale(0.98); 
+}
+
+.ind_button:focus {
+    outline: none; 
+}
