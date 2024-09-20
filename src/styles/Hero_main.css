@@ -10,7 +10,7 @@ h1 {
     background-color: rgb(90,69,170);
 }
 .text{
-    width: 51%;
+    width: 60%;
     padding-left: 150px;
     margin-left: 120px;
 }
@@ -18,7 +18,7 @@ h1 {
     width: 90%;
     padding-left: 60px;
     padding-right: 60px;
-    text-align: justify;
+    /* text-align: justify; */
     font-size: 40px;
     font-weight: 800;
     color: white;
@@ -32,7 +32,7 @@ h1 {
     padding-right: 60px;
     text-align: justify;
     font-size: 18px;
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 400;
     color: white;
     line-height: 25px;
@@ -46,19 +46,31 @@ h1 {
 
 /* MEDIA QUERY: Mobile Styles */
 @media (max-width: 767px) {
+    .hero_main {
+        flex-direction: column;
+    }
     .image {
-        display: none;
+        /* display: none; */
+        width: 100%;
+        padding-top: 0;
+        padding-left: 65px;
     }
     .text {
         width: 100%;
-        padding: 0px;
+        padding-left: 0;
+        margin-left: 0;
     }
     .text h2 {
         width: 100%;
-        font-size: 20px;
-        padding: 20px;
+        font-size: 15px;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
         text-align: center;
-        text-align: justify;
+        line-height: 20px;
+        padding: 10px;
     }
-    
+    .text h3 {
+        display: none;
+    }
 }

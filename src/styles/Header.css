@@ -21,7 +21,7 @@
 
 .navbar {
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     justify-content: flex-end;
 }
 
@@ -50,7 +50,7 @@
 .nav-menu.active {
     display: block;
     position: fixed;
-    top: 95px;
+    top: 90px;
     left: 0px;
     width: 100%;
     background-color: rgb(54, 46, 86);
@@ -72,7 +72,13 @@
     margin-top: 10px;
     display: none;
 }
-
+.logo-img {
+    width: 200px;
+    height: auto;
+}
+.short-logo {
+    display: none;
+}
 
 
 /* MEDIA QUERY: Mobile Styles */
@@ -80,9 +86,48 @@
     .nav-menu {       /* remove the nav menu */
         display: none; 
     }
-
     .icon {             /* show the icon */
         display: block; 
     }
+    .logo-img {
+        display: none;
+    }
+    .short-logo {
+        display: block; /* Show the small logo */
+        width: 50px; 
+        height: auto;  /* Keep aspect ratio */
+    }
+    .languages-dropdown {
+        width: 300px;
+        margin-right: 15px;
+        
+    }
+    .right_side{
+        width: 80%;
+    }
+    
+}
+.right_side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.languages-dropdown {
+    width: 400px;
+    padding: 5px;
+    font-size: 16px; 
+    font-weight: bold;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    background-color:rgb(226,221,246); 
+    transition: border-color 0.3s; 
 }
 
+.languages-dropdown:focus {
+    border-color: #ffffff; 
+    outline: none; 
+}
+option {
+    font-weight: bold;
+}
