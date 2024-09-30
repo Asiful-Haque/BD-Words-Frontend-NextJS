@@ -1,7 +1,7 @@
 
 import '../styles/all_buttons.css';
 
-export default function all_buttons() {
+export default function All_buttons() {
     return (
         <main>
             <div className="option_container">

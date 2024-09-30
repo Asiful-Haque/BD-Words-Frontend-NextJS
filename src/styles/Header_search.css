@@ -46,8 +46,12 @@ body {
     border-bottom-left-radius: 25px;
 }
 
+.search_field input[type="text"]::placeholder {
+    color: rgb(253, 253, 253);  
+}
+
 .search_field button {
-    background-color: #444;
+    background-color: rgb(54,46,86);
     border: none;
     padding: 15px;
     cursor: pointer;

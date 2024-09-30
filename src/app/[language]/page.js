@@ -11,7 +11,7 @@ export default function language({ params }) {
 
   return (
     <div>
-      <Header_search></Header_search>
+      <Header_search language={language}></Header_search>
       <Hero_main></Hero_main>
       <Random_word></Random_word>
       <Four_part></Four_part>

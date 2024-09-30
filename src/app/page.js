@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Buttons from "@/components/all_buttons";
+import All_buttons from "@/components/All_buttons";
 
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Header></Header>
       <Hero></Hero>
-      <Buttons></Buttons>
+      <All_buttons></All_buttons>
       <Footer></Footer>
     </div>
   );
