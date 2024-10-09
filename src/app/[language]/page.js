@@ -8,7 +8,6 @@ import Random_word from "@/components/language_page/Random_word";
 
 export default function language({ params }) {
     const { language } = params;
-    console.log("ehllo");
 
   return (
     <div>

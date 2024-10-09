@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import '../../styles/Random_word.css';
 import Image from 'next/image';
 
-export default function Random_word() {
+export default function Random_word({ white }) {
+    console.log(white);
     const [words, setWords] = useState([]);
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export default function Random_word() {
     }, []); 
 
     return (
-        <div className="random_word_container">
+        <div className={`random_word_container ${white == "yes" ? 'modified' : ''}`}>
             <div className='image'>
                 <Image 
                     src="/randomimage.avif"

@@ -4,20 +4,31 @@ import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import '../styles/Header.css';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [searchWord, setSearchWord] = useState('');
+    const [selectedLanguage, setSelectedLanguage] = useState('');
+    const router = useRouter();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    // Function to handle dropdown change and navigate to the selected link
-    const handleSelectChange = (e) => {
-        const selectedLink = e.target.value;
-        if (selectedLink) {
-            window.location.href = selectedLink; // Redirect to the selected URL
-        }
+    const handleSearchChange = (e) => {
+        setSearchWord(e.target.value);
     };
+    const handleSelectChange = (e) => {
+        setSelectedLanguage(e.target.value);
+    };
+    const handleSearchSubmit = (e) => {
+        if(e.key === 'Enter'){
+                const targetUrl = `/${selectedLanguage}/english-to-${selectedLanguage}-meaning-${searchWord}`;
+                setSearchWord(''); 
+                router.push(targetUrl);
+                // window.location.href = targetUrl; 
+        }
+    }
 
     return (
         <div className='all_container'>
@@ -39,32 +50,42 @@ export default function Header() {
 
 
                 <div className='right_side'>
-                    <select name="languages" className='languages-dropdown' onChange={handleSelectChange}>
-                        <option value="">Choose a language</option>
-                            <option value="/afrikaans/">Afrikaans</option>
-                            <option value="/amharic/">Amharic</option>
-                            <option value="/burmese/">Burmese</option>
-                            <option value="/filipino/">Filipino</option>
-                            <option value="/gujarati/">Gujarati</option>
-                            <option value="/hebrew/">Hebrew</option>
-                            <option value="/hindi/">Hindi</option>
-                            <option value="/hausa/">Hausa</option>
-                            <option value="/kannada/">Kannada</option>
-                            <option value="/malayalam/">Malayalam</option>
-                            <option value="/maari/">Maari</option>
-                            <option value="/marathi/">Marathi</option>
-                            <option value="/nepali/">Nepali</option>
-                            <option value="/persian/">Persian</option>
-                            <option value="/punjabi/">Punjabi</option>
-                            <option value="/sinhalese/">Sinhalese</option>
-                            <option value="/somali/">Somali</option>
-                            <option value="/swahili/">Swahili</option>
-                            <option value="/tamil/">Tamil</option>
-                            <option value="/telugu/">Telugu</option>
-                            <option value="/urdu/">Urdu</option>
-                            <option value="/yoruba/">Yoruba</option>
-                            <option value="/zulu/">Zulu</option>
-                    </select>
+                    <div className="searching">
+                        <select name="languages" className='languages-dropdown' onChange={handleSelectChange}>
+                                <option value="">Choose a language</option>
+                                <option value="afrikaans">Afrikaans</option>
+                                <option value="amharic">Amharic</option>
+                                <option value="burmese">Burmese</option>
+                                <option value="filipino">Filipino</option>
+                                <option value="gujarati">Gujarati</option>
+                                <option value="hebrew">Hebrew</option>
+                                <option value="hindi">Hindi</option>
+                                <option value="hausa">Hausa</option>
+                                <option value="kannada">Kannada</option>
+                                <option value="malayalam">Malayalam</option>
+                                <option value="maari">Maari</option>
+                                <option value="marathi">Marathi</option>
+                                <option value="nepali">Nepali</option>
+                                <option value="persian">Persian</option>
+                                <option value="punjabi">Punjabi</option>
+                                <option value="sinhalese">Sinhalese</option>
+                                <option value="somali">Somali</option>
+                                <option value="swahili">Swahili</option>
+                                <option value="tamil">Tamil</option>
+                                <option value="telugu">Telugu</option>
+                                <option value="urdu">Urdu</option>
+                                <option value="yoruba">Yoruba</option>
+                                <option value="zulu">Zulu</option>
+                        </select>
+                        <input 
+                            type="text"
+                            placeholder="Search for words"
+                            value={searchWord}
+                            onChange={handleSearchChange}
+                            onKeyDown={handleSearchSubmit} 
+                        />
+                    </div>
+                    
                     
                     <div className='navbar'>
                         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

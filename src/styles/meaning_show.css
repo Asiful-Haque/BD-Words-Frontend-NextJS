@@ -1,0 +1,204 @@
+.text_value {
+    padding-bottom: 40px;
+}
+.text_value h2 {
+    max-width: 500px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 42px;
+    color: #212529;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-weight: bolder;
+}
+.value {
+    background-color: rgb(226,221,246);
+    max-width: 1050px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.value h1 {
+    background-color: rgb(226,221,246);
+}
+.meaning {
+    font-size: 30px;
+    line-height: 30px;
+    color: #212529;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.meaning_container {
+    padding-bottom: 90px;
+}
+
+
+/* share part  */
+.share-container {
+    background-color: #83d8c8;
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+.share-container .icons i {
+    font-size: 56px; 
+    
+}
+.share-container h3 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.icons a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.icons a:hover {
+    color: #333;
+}
+
+.icons i {
+    border: 2px solid #333;
+    padding: 15px;
+    border-radius: 50%;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons i:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+
+
+/* sentence part */
+.sentence-container {
+    background-color: rgb(80,193,172);
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+    
+}
+
+.sentence-container h3 {  
+    font-size: 40px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.sentence-container ol {
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    list-style-type: none;
+}
+.sentence-container ol li {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.cont {
+    width: 80%;
+    margin: 0 auto;;
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .meaning_container {
+        padding-bottom: 30px;
+    }
+    .text_value h2 {
+        max-width: 500px;
+        text-align: center;
+        font-size: 26px;
+        line-height: 32px;
+        color: #212529;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-weight: bolder;
+    }
+    .value {
+        background-color: rgb(226, 221, 246);
+        max-width: 1050px;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .meaning {
+        font-size: 20px;
+        line-height: 25px;
+        color: #212529;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .sentence-container {
+        background-color: rgb(80,193,172);
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        padding: 10px;
+        margin-top: 50px;
+        
+    }
+    .sentence-container h3 {  
+        font-size: 20px;
+        font-weight: bolder;
+        color: #333;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .sentence-container ol {
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        list-style-type: none;
+    }
+    .sentence-container ol li {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .share-container .icons i {
+        font-size: 30px; 
+        margin-bottom: 10px;
+    }
+    .share-container {
+        background-color: #83d8c8;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .share-container h3 {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #333;
+        margin-bottom: 15px;
+    }
+}

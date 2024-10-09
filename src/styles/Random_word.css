@@ -1,12 +1,19 @@
 
 .random_word_container {
     width: 100%;
-    background-color: wheat;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: rgb(226,221,246);
+}
+.random_word_container.modified {
+    width: 100%;
+    /* background-color: wheat; */
     display: flex;
     justify-content: space-around;
     /* align-items: center; */
     flex-direction: row;
-    background-color: rgb(226,221,246);
+    background-color: rgb(255, 255, 255);
 }
 
 .random_word_container .image {

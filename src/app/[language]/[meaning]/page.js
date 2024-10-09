@@ -4,9 +4,6 @@ import Header_search from "@/components/language_page/Header_search";
 import Random_word from "@/components/language_page/Random_word";
 import Meaning_show from "@/components/meaning_page/meaning_show";
 
-import '@/styles/meaning_custom_header_search.css';
-import '@/styles/meaning_custom_random_word.css';
-
 
 export default async function Meaning({ params }) {
 
@@ -30,9 +27,9 @@ export default async function Meaning({ params }) {
 
   return (
       <div>
-          <Header_search language={language} word={word}></Header_search>
-          <Random_word></Random_word>
+          <Header_search language={language} word={word} white="yes"></Header_search>
           <Meaning_show language={language} word={word} meaning={meaningData}></Meaning_show>
+          <Random_word white ="yes"></Random_word>
           <Footer></Footer>
       </div>
   );
