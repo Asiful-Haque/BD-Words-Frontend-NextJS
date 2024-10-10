@@ -49,33 +49,33 @@ export default function Header() {
                 </div>
 
 
-                <div className='right_side'>
+                {/* <div className='right_side'> */}
                     <div className="searching">
                         <select name="languages" className='languages-dropdown' onChange={handleSelectChange}>
-                                <option value="">Choose a language</option>
-                                <option value="afrikaans">Afrikaans</option>
-                                <option value="amharic">Amharic</option>
-                                <option value="burmese">Burmese</option>
-                                <option value="filipino">Filipino</option>
-                                <option value="gujarati">Gujarati</option>
-                                <option value="hebrew">Hebrew</option>
-                                <option value="hindi">Hindi</option>
-                                <option value="hausa">Hausa</option>
-                                <option value="kannada">Kannada</option>
-                                <option value="malayalam">Malayalam</option>
-                                <option value="maari">Maari</option>
-                                <option value="marathi">Marathi</option>
-                                <option value="nepali">Nepali</option>
-                                <option value="persian">Persian</option>
-                                <option value="punjabi">Punjabi</option>
-                                <option value="sinhalese">Sinhalese</option>
-                                <option value="somali">Somali</option>
-                                <option value="swahili">Swahili</option>
-                                <option value="tamil">Tamil</option>
-                                <option value="telugu">Telugu</option>
-                                <option value="urdu">Urdu</option>
-                                <option value="yoruba">Yoruba</option>
-                                <option value="zulu">Zulu</option>
+                                <option value="">Language</option>
+                                <option value="afrikaans">Afr</option>
+                                <option value="amharic">Amh</option>
+                                <option value="burmese">Bur</option>
+                                <option value="filipino">Fil</option>
+                                <option value="gujarati">Guj</option>
+                                <option value="hebrew">Heb</option>
+                                <option value="hindi">Hin</option>
+                                <option value="hausa">Hau</option>
+                                <option value="kannada">Kan</option>
+                                <option value="malayalam">Ma</option>
+                                <option value="maari">Maa</option>
+                                <option value="marathi">Mar</option>
+                                <option value="nepali">Nep</option>
+                                <option value="persian">Per</option>
+                                <option value="punjabi">Pun</option>
+                                <option value="sinhalese">Sin</option>
+                                <option value="somali">Som</option>
+                                <option value="swahili">Swa</option>
+                                <option value="tamil">Tam</option>
+                                <option value="telugu">Tel</option>
+                                <option value="urdu">Ur</option>
+                                <option value="yoruba">Yor</option>
+                                <option value="zulu">Zu</option>
                         </select>
                         <input 
                             type="text"
@@ -97,7 +97,7 @@ export default function Header() {
                             <i className="fas fa-bars"></i>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
 
                 
             </header>

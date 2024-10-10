@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 import Header_search from "@/components/language_page/Header_search";
 import Random_word from "@/components/language_page/Random_word";
 import Meaning_show from "@/components/meaning_page/meaning_show";

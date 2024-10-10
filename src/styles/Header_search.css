@@ -170,7 +170,7 @@ body {
         border: 2px solid white;
         border-radius: 55px;
         background-color: rgb(255, 255, 255);
-        width: 65%;
+        /* width: 65%; */
     }
     
     .search_field button {
@@ -182,6 +182,16 @@ body {
         margin: 0px;
         padding: 0;
         color :white;
+    }
+    .suggestions-dropdown {
+        position: absolute;
+        background-color: rgb(54, 46, 86);
+        /* border: 1px solid #ccc; */
+        z-index: 1000;
+        max-height: 400px;
+        width: 400px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
     }
 }
 
@@ -212,11 +222,11 @@ body {
 .suggestions-dropdown {
     position: absolute; /* Position the dropdown absolutely */
     background-color: rgb(54,46,86);
-    border: 1px solid #ccc; /* Border for the dropdown */
+    /* border: 1px solid #ccc; Border for the dropdown */
     z-index: 1000; /* Ensures it appears above other elements */
     max-height: 400px; /* Maximum height for the dropdown */
-    overflow-y: auto; /* Enable scrolling for long lists */
-    width: 400px; /* Match the width of the input */
+    /* overflow-y: auto; Enable scrolling for long lists */
+    width: 100%; /* Match the width of the input */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
     border-radius: 4px; /* Optional: add rounded corners */
 }

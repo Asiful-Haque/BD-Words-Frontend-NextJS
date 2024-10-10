@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Importing useRouter for dynamic routing
 import '../../styles/Header_search.css';
+import Image from 'next/image';
 
 export default function Header_search({ language, word = '', white }) {
     const [isMenu_2Open, setIsMenu_2Open] = useState(false);
@@ -52,7 +53,13 @@ export default function Header_search({ language, word = '', white }) {
     return (
         <div className={`Search_bar_container ${white === "yes" ? 'modified' : ''}`}>
             <div className={`search-bar ${white === "yes" ? 'modified' : ''}`}>
-                <div className="label">URDU DICTIONARY</div>
+                <Image 
+                    className="logo-img"
+                    src={`/${language}.png`} 
+                    alt={`Large ${language} Dictionary Logo`}  
+                    width={200} 
+                    height={70} 
+                />
                 <img 
                     className="short_logo_urdu" 
                     src="https://english-nepali.com/urdu/logo/urdu-sm.png" 
