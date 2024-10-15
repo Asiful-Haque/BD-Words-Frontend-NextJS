@@ -1,0 +1,31 @@
+.mcq-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(90, 69, 170);
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    flex-direction: column;
+    align-items: center; /* Centers vertically */
+  }
+  
+.mcq {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 1400px;
+    height: 700px;
+    background: rgb(226,221,246);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.mcq h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: bolder;
+}

@@ -63,12 +63,12 @@ export default function Header() {
                                 <option value="hausa">Hau</option>
                                 <option value="kannada">Kan</option>
                                 <option value="malayalam">Ma</option>
-                                <option value="maari">Maa</option>
+                                <option value="maori">Maa</option>
                                 <option value="marathi">Mar</option>
                                 <option value="nepali">Nep</option>
                                 <option value="persian">Per</option>
                                 <option value="punjabi">Pun</option>
-                                <option value="sinhalese">Sin</option>
+                                <option value="sinhala">Sin</option>
                                 <option value="somali">Som</option>
                                 <option value="swahili">Swa</option>
                                 <option value="tamil">Tam</option>
