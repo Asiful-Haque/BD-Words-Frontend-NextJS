@@ -9,6 +9,7 @@ export default function WordGame({ originalWord }) {
   const [shuffledLetters, setShuffledLetters] = useState([]);
   const [userInput, setUserInput] = useState([]);
   const [message, setMessage] = useState('');
+  const [droppedLetters, setDroppedLetters] = useState([]);
 
   useEffect(() => {
     // Shuffle the letters when the component mounts
@@ -32,6 +33,7 @@ export default function WordGame({ originalWord }) {
     const letter = e.dataTransfer.getData("text/plain");
     if (letter) {
       setUserInput((prev) => [...prev, letter]);
+      setDroppedLetters((prev) => [...prev, letter]);
     }
   };
 
@@ -48,6 +50,7 @@ export default function WordGame({ originalWord }) {
     setUserInput([]);
     setMessage('');
     setShuffledLetters(shuffledLetters.sort(() => Math.random() - 0.5)); // Reshuffle
+    setDroppedLetters([]);
   };
   
   return (
@@ -60,7 +63,7 @@ export default function WordGame({ originalWord }) {
                 key={index}
                 draggable
                 onDragStart={(e) => handleDragStart(e, letter)}
-                className="letter"
+                className={`letter ${droppedLetters.includes(letter) ? 'dropped' : ''}`}
               >
                 {letter}
               </div>
@@ -72,12 +75,15 @@ export default function WordGame({ originalWord }) {
             onDrop={handleDrop}
             onDragOver={(e) => e.preventDefault()}
           >
-            <h3>Drop Letters Here</h3>
-            <div className="user-input">
-              {userInput.map((letter, index) => (
-                <span key={index} className="dropped-letter">{letter}</span>
-              ))}
+            <div className='bind'>
+              <h3>Drop Letters Here</h3>
+              <div className="user-input">
+                {userInput.map((letter, index) => (
+                  <span key={index} className="dropped-letter">{letter}</span>
+                ))}
+              </div>
             </div>
+            
           </div>
 
           <div className='button-container'>

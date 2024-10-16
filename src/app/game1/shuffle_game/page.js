@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import WordGame from "@/components/wordGame";
 
 export default async function shuffle_game() {
@@ -12,7 +14,9 @@ export default async function shuffle_game() {
     const originalWord = data.Word;
   return (
       <div>
+          <Header></Header>
           <WordGame originalWord={originalWord}></WordGame>
+          <Footer></Footer>
       </div>
   );
 }

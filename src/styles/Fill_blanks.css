@@ -1,26 +1,45 @@
+::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+html {
+    scrollbar-width: none; /* Hides the scrollbar */
+}
+
 .mcq-container {
     width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+    height: 879px;
     background-color: rgb(90, 69, 170);
     display: flex;
-    justify-content: center; /* Centers horizontally */
+    justify-content: center; 
     flex-direction: column;
-    align-items: center; /* Centers vertically */
-  }
+    align-items: center; 
+    padding-bottom: 40px;
+}
+.mcq-container h2{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    /* text-transform: uppercase; */
+    margin-bottom: 60px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
   
 .mcq {
     text-align: center;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    width: 1400px;
-    height: 700px;
+    width: 95%;
+    height: 75%;
     background: rgb(226,221,246);
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    /* border-radius: 15px; */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 30px;
 }
 .mcq h2{
     font-size: 50px;
@@ -29,3 +48,173 @@
     color: #000000;
     font-weight: bolder;
 }
+
+/* Style for each MCQ question */
+.parent-div-for-each-mcq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left inside the mcq */
+}
+
+.parent-div-for-each-mcq .each-mcq {
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing between each MCQ question */
+    box-shadow: 0px 0px 10px 10px rgba(132, 136, 133, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.each-mcq p {
+    margin: 5px 0; /* Add some margin for the paragraphs */
+    font-weight: bolder;
+    font-size: 20px;
+}
+label {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+}
+input {
+    margin-right: 10px;
+}
+
+.chk-btn {
+    /* background-color: rgb(79,192,167);  */
+    color: rgb(0, 0, 0);
+    width: 180px; 
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease, transform 0.3s ease; 
+    flex: 0 1 calc(15% - 40px);
+    box-sizing: border-box;
+    border: 2px black solid;
+}
+
+.chk-btn:hover {
+    transform: scale(1.1);
+    background-color: rgb(79,192,167);
+}
+
+
+/* ////overlay div style */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .overlay-content {
+    font-family: 'Times New Roman', Times, serif;
+    background: rgba(0, 0, 0, 0.8); /* White background for the overlay content */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 30%;
+  }
+  
+  .overlay-content h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .overlay-content button {
+    width: 80%;
+    padding: 10px 20px;
+    background-color: rgb(1,172,143); /* Bootstrap primary color */
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .overlay-content button:hover {
+    background-color: #000000; /* Darker shade for hover */
+    border: 1px solid white;
+  }
+
+  @media (max-width: 767px) {
+    .mcq-container h2 {
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        /* text-transform: uppercase; */
+        margin-bottom: 30px;
+        color: #ffffff;
+        font-weight: bolder;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    .overlay-content {
+        font-family: 'Times New Roman', Times, serif;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 30%;
+    }
+    .overlay-content h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+      }
+      
+      .overlay-content button {
+        width: 40%;
+        padding: 10px 20px;
+        background-color: rgb(1,172,143); /* Bootstrap primary color */
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 10px;
+      }
+      
+      .overlay-content button:hover {
+        background-color: #000000; /* Darker shade for hover */
+        border: 1px solid white;
+      }
+  }
+  
