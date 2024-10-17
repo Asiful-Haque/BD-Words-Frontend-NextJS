@@ -8,8 +8,8 @@ export default function All_buttons() {
             <div className="option_container">
                 <h1>Available Languages</h1>
                 <div className="store">
-                    <Link href="/afrikaans">
-                        <button>Afrikaans</button>
+                    <Link href="/afrikaan">
+                        <button>Afrikaan</button>
                     </Link>
                     <Link href="/amharic">
                         <button>Amharic</button>

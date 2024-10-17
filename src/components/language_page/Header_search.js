@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Importing useRouter for dynamic routing
 import '../../styles/Header_search.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header_search({ language, word = '', white }) {
     const [isMenu_2Open, setIsMenu_2Open] = useState(false);
@@ -53,18 +54,33 @@ export default function Header_search({ language, word = '', white }) {
     return (
         <div className={`Search_bar_container ${white === "yes" ? 'modified' : ''}`}>
             <div className={`search-bar ${white === "yes" ? 'modified' : ''}`}>
-                <Image 
-                    className="logo-img"
-                    src={`/${language}.png`} 
-                    alt={`Large ${language} Dictionary Logo`}  
-                    width={200} 
-                    height={70} 
-                />
-                <img 
+                <Link href={`/${language}`}>
+                    <Image 
+                        className="logo-img"
+                        src={`/${language}.png`} 
+                        alt={`Large ${language} Dictionary Logo`}  
+                        width={200} 
+                        height={70} 
+                    />
+                </Link>
+                
+                {/* <Image 
                     className="short_logo_urdu" 
                     src="https://english-nepali.com/urdu/logo/urdu-sm.png" 
                     alt="Small Urdu Dictionary Logo" 
-                />
+                    fill
+                    style={{ objectFit: 'contain' }}
+                /> */}
+                <Link href={`/${language}`}>
+                    <Image 
+                        className="short_logo_urdu"
+                        src={`/${language}_short.png`} 
+                        alt={`Small ${language} Dictionary Logo`}  
+                        width={50} 
+                        height={0} 
+                    />
+                </Link>
+
                 <div className="relative-absolute">
                     <form onSubmit={handleSearch} className={`search_field ${white === "yes" ? 'modified' : ''}`}>
                         <input 

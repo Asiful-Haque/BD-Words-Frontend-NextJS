@@ -17,7 +17,7 @@
     max-width: 1050px;
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     margin: 0 auto;
     margin-top: 10px;
@@ -81,7 +81,12 @@
 .icons i:hover {
     transform: translateY(-5px) scale(1.1);
 }
-
+.text_value a {
+    color: rgb(80,193,172);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 44px;
+}
 
 
 /* sentence part */
@@ -202,3 +207,4 @@
         margin-bottom: 15px;
     }
 }
+

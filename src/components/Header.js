@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import '../styles/Header.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 export default function Header() {
@@ -34,18 +35,24 @@ export default function Header() {
         <div className='all_container'>
             <header className='header'>
                 <div className="logo-container">
-                    <Image 
-                        className="logo-img"
-                        src="/logo english welsh.png"
-                        alt="Large Urdu Dictionary Logo" 
-                        width={200} 
-                        height={70} 
-                    />
-                    <img 
-                        className="short-logo" 
-                        src="https://english-nepali.com/urdu/logo/urdu-sm.png" 
-                        alt="Small Urdu Dictionary Logo" 
-                    />
+                    <Link href={`/`}>
+                        <Image 
+                            className="logo-img"
+                            src="/logo english welsh.png"
+                            alt="Large Urdu Dictionary Logo" 
+                            width={200} 
+                            height={70} 
+                        />
+                    </Link>
+                    <Link href={`/`}>
+                        <Image 
+                            className="short-logo"
+                            src="/logo english welsh_short.png"
+                            alt="small Urdu Dictionary Logo"
+                            width={55} 
+                            height={0} 
+                        />
+                    </Link>
                 </div>
 
 
@@ -53,7 +60,7 @@ export default function Header() {
                     <div className="searching">
                         <select name="languages" className='languages-dropdown' onChange={handleSelectChange}>
                                 <option value="">Language</option>
-                                <option value="afrikaans">Afr</option>
+                                <option value="afrikaan">Afr</option>
                                 <option value="amharic">Amh</option>
                                 <option value="burmese">Bur</option>
                                 <option value="filipino">Fil</option>

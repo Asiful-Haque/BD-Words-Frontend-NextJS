@@ -138,8 +138,7 @@ input::placeholder {
     }
     .short-logo {
         display: block; /* Show the small logo */
-        width: 50px; 
-        height: auto;  /* Keep aspect ratio */
+        margin-right: 15px;
     }
     /* .right_side{
         width: 80%;

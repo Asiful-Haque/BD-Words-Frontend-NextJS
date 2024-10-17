@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import '../../styles/Four_part.css';
-export default function Four_part() {
+import Link from 'next/link';
+export default function Four_part({ language }) {
     //For the date of current day
     const d = new Date();
     const formattedDate = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -31,16 +32,18 @@ export default function Four_part() {
                 <div className='content'>
                     <h3>WORD OF THE DAY</h3>
                     <h2>{formattedDate}</h2>
-                    <a href="/#"><button>{wotD}</button></a>
+                    <a href={`/${language}/english-to-${language}-meaning-${wotD}`}><button>{wotD}</button></a>
                 </div>
             </div>
             <div className='parts_2'>
                 <div className='content'>
-                    <h3>FILL IN THE BLANK</h3>
-                    <h2>Take The Quiz</h2>
-                    <p>In this quiz, you will be presented with sentences that have one or more missing words.
-                       Your task is to fill in the blanks with the most appropriate word or phrase.
-                       This quiz is designed to help you expand your vocabulary and improve your understanding of word usage.</p>
+                    <Link href='/mcq/fillInTheBlanks'>
+                        <h3>FILL IN THE BLANK</h3>
+                        <h2>Take The Quiz</h2>
+                        <p>In this quiz, you will be presented with sentences that have one or more missing words.
+                        Your task is to fill in the blanks with the most appropriate word or phrase.
+                        This quiz is designed to help you expand your vocabulary and improve your understanding of word usage.</p>
+                    </Link>
                 </div>
             </div>
             <div className='parts_3'>

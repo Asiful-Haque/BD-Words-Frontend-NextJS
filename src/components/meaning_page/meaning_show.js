@@ -1,6 +1,8 @@
+"use client"
+
 import '../../styles/meaning_show.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import Image from 'next/image';
 
 export default function Meaning_show({ language, word, meaning }) {
 
@@ -8,11 +10,23 @@ export default function Meaning_show({ language, word, meaning }) {
     const stripHtmlTags = (htmlString) => {
         return htmlString.replace(/<[^>]+>/g, ''); 
     };
+    const speak = (text) => {
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+    };
 
     return (
         <div className="meaning_container">
             <div className="text_value">
-                <h2 className="sound">English to {language} meaning of <strong>{word}</strong></h2>
+                <h2 className="sound">English to {language} meaning of <strong>{word}</strong>
+                    <button
+                        onClick={() => speak(word)} 
+                        className="mic-button" 
+                        aria-label="Speak">
+                        <a><i class="fa-solid fa-volume-high"></i></a>
+                    </button> 
+                </h2>
+                
                 {meaning ? (
                     <div className="value">
                         <h1 className="meaning">{stripHtmlTags(meaning.meaning)}</h1>

@@ -46,7 +46,7 @@ body {
     flex-direction: row;
     border: 2px solid white;
     border-radius: 55px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     width: 100%;
 }
 .relative-absolute {
@@ -151,8 +151,8 @@ body {
     }
     .short_logo_urdu {
         display: block; /* Show the small logo */
-        width: 50px; 
-        height: auto;  /* Keep aspect ratio */
+        /* position: relative; */
+        margin-right: 15px;
     }
     .icon_2 {
         font-size: 30px;
