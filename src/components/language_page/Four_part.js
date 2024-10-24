@@ -59,6 +59,13 @@ export default function Four_part({ language }) {
                     <h3>YOUR WORD SEARCH HISTORY</h3>
                 </div>
             </div>
+            <div className='parts_4'>  
+                <div className='content'>
+                    <Link href='/game1/shuffle_game'>
+                        <h3>PLAY EXCITING GAMES</h3>
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 }

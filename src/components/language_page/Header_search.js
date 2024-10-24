@@ -109,7 +109,7 @@ export default function Header_search({ language, word = '', white }) {
                 </div>
                 <ul className={`nav_menu_2 ${isMenu_2Open ? 'active' : ''}`}>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#list">Word List</a></li>
+                    <li><a href={`/${language}/wordList`}>Word List</a></li>
                     <li><a href="#history">Word History</a></li>
                 </ul>
             </div>

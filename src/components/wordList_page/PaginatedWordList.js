@@ -16,17 +16,28 @@ const PaginatedWordList = async ({ language, currentPage }) => {
     const { words, totalPages, hasNextPage, hasPreviousPage, nextPage, previousPage } = responseData;
 
     return (
-        <div>
+        <div className='word-list-container'>
             <h1>{`English to ${language.charAt(0).toUpperCase() + language.slice(1)} Word List (Page ${currentPage})`}</h1>
-            <ul>
+            <div className='all-word-container'>
+                {/* <ul>
+                    {words.map((word, index) => (
+                        <li key={index}>
+                            <Link href={`/${language}/english-to-${language}-meaning-${word.replace(/\s+/g, '-').toLowerCase()}`}>
+                                {word}
+                            </Link>
+                        </li>
+                    ))}
+                </ul> */}
+
                 {words.map((word, index) => (
-                    <li key={index}>
-                        <Link href={`/${language}/english-to-${language}-meaning-${word.replace(/\s+/g, '-').toLowerCase()}`}>
-                            {word}
-                        </Link>
-                    </li>
+                        <div className='each-word' key={index}>
+                            <Link href={`/${language}/english-to-${language}-meaning-${word.replace(/\s+/g, '-').toLowerCase()}`}>
+                                {word}
+                            </Link>
+                        </div>
                 ))}
-            </ul>
+            </div>
+            
             <div className="pagination-controls">
                 {currentPage > 1 && (
                     <Link href={`/${language}/wordList?page=1`}>
@@ -49,6 +60,10 @@ const PaginatedWordList = async ({ language, currentPage }) => {
                         <button>Last</button>
                     </Link>
                 )}
+            </div>
+
+            <div className="glowing-border">
+                Your Content Here
             </div>
         </div>
     );

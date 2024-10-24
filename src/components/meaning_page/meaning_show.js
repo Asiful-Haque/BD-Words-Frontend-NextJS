@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 export default function Meaning_show({ language, word, meaning }) {
 
+    word = decodeURIComponent(word);
     // Function to remove all HTML tags
     const stripHtmlTags = (htmlString) => {
         return htmlString.replace(/<[^>]+>/g, ''); 
@@ -23,7 +24,7 @@ export default function Meaning_show({ language, word, meaning }) {
                         onClick={() => speak(word)} 
                         className="mic-button" 
                         aria-label="Speak">
-                        <a><i class="fa-solid fa-volume-high"></i></a>
+                        <a><i className="fa-solid fa-volume-high"></i></a>
                     </button> 
                 </h2>
                 

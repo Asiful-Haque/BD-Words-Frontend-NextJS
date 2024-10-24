@@ -1,7 +1,7 @@
 // Add this line at the top to specify this as a Client Component
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback  } from 'react';
 import '@/styles/wordGame.css'; 
 import Link from 'next/link';
 
@@ -30,21 +30,27 @@ export default function WordGame({ originalWord }) {
     e.dataTransfer.setData("text/plain", index);
   };
 
+  const handleCheckMatch = useCallback(() => {
+    const userWord = userInput.join(''); // Make sure to use the latest userInput
+    if (userWord === originalWord) {
+      setMessage("Congratulations! You've matched the word!");
+    } else {
+      setMessage("Try again!");
+    }
+  }, [userInput, originalWord]); 
+
+  useEffect(() => {
+    if (userInput.length === originalWord.length) {
+      handleCheckMatch();
+    }
+  }, [userInput.length, originalWord.length, handleCheckMatch]);
+
   const handleDrop = (e) => {
     const index = e.dataTransfer.getData("text/plain");
     if (index) {
       const letter = shuffledLetters[index]; // Get the letter using the index
       setUserInput((prev) => [...prev, letter]);
       setDroppedIndexes((prev) => [...prev, parseInt(index)]); // Store the dropped index
-    }
-  };
-
-  const handleCheckMatch = () => {
-    const userWord = userInput.join('');
-    if (userWord === originalWord) {
-      setMessage("Congratulations! You've matched the word!");
-    } else {
-      setMessage("Try again!");
     }
   };
 
@@ -88,7 +94,7 @@ export default function WordGame({ originalWord }) {
         </div>
 
         <div className='button-container'>
-          <button className='chk-btn' onClick={handleCheckMatch}>Check Match</button>
+          {/* <button className='chk-btn' onClick={handleCheckMatch}>Check Match</button> */}
           <button className='chk-btn' onClick={handleReset}>Reset</button>
           <button className='chk-btn' onClick={() => window.location.reload()}>
             Try Another
