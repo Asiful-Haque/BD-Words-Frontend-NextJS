@@ -29,7 +29,7 @@ export default async function Meaning({ params }) {
       <div>
           <Header_search language={language} word={word} white="yes"></Header_search>
           <Meaning_show language={language} word={word} meaning={meaningData}></Meaning_show>
-          <Random_word white ="yes"></Random_word>
+          <Random_word language={language} white ="yes"></Random_word>
           <Footer></Footer>
       </div>
   );

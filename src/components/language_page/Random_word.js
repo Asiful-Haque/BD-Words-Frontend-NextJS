@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import '../../styles/Random_word.css';
 import Image from 'next/image';
 
-export default function Random_word({ white }) {
-    console.log(white);
+export default function Random_word({ language, white }) {
+    // console.log(white);
     const [words, setWords] = useState([]);
 
     useEffect(() => {
@@ -38,7 +38,7 @@ export default function Random_word({ white }) {
                 <h3>Random Words</h3>
                 <div className='five_words'>
                     {words.map((word, index) => (
-                        <a href="/#"><button className='ind_button'>{word}</button></a>
+                        <a key={index} href={`/${language}/english-to-${language}-meaning-${word}`}><button className='ind_button'>{word}</button></a>
                     ))}
                 </div>
             </div>

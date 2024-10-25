@@ -3,7 +3,6 @@
 }
 
 h1 {
-    font-size: 1.5em;
     margin-bottom: 15px;
 }
 
@@ -34,6 +33,7 @@ li {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 .pagination-controls button:hover {
@@ -108,3 +108,47 @@ li {
     /* background: #884f21; */
     transform: scale(0.9);
 }
+
+
+.Letter-part {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  
+  
+  .alphabet-button {
+    padding: 8px 12px;
+    background-color: rgb(81,193,171);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .alphabet-button:hover {
+    background-color: rgb(226,221,246);
+    color: black;
+  }
+  
+
+
+
+
+  @media (max-width: 767px) {
+    .Letter-part {
+        padding: 20px;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .pagination-controls {
+        font-size: 15px;
+    }
+    .word-list-container h1{
+        font-size: 25px;
+    }
+  }
