@@ -117,7 +117,7 @@ body {
 
 .nav_menu_2.active {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 90px;
     left: 0px;
     width: 100%;
@@ -127,6 +127,7 @@ body {
     z-index: 1000;
     flex-direction: column;
 }
+
 
 
 
