@@ -7,7 +7,7 @@ import Meaning_show from "@/components/meaning_page/meaning_show";
 
 export default async function Meaning({ params }) {
 
-  const { language, meaning } = params;
+  const { language, meaning } = params; //params is an array..like arr[0]/arr[1]
   
     const parts = meaning.split('-'); 
     const word = parts[parts.length - 1];       
